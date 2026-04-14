@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --kw-red: #e63030;
+  --kw-orange: #f07820;
+  --kw-yellow: #f5c800;
+  --kw-green: #3ab54a;
+  --kw-blue: #2e7dd6;
+  --kw-purple: #8b3fa8;
+  --kw-cream: #fffdf8;
+  --kw-dark: #1a1a1a;
+  --kw-section-steps: #f0f8ff;
+  --kw-section-reviews: #f5fff6;
+}
+
+@theme inline {
+  --color-kw-red: var(--kw-red);
+  --color-kw-orange: var(--kw-orange);
+  --color-kw-yellow: var(--kw-yellow);
+  --color-kw-green: var(--kw-green);
+  --color-kw-blue: var(--kw-blue);
+  --color-kw-purple: var(--kw-purple);
+  --color-kw-cream: var(--kw-cream);
+  --color-kw-dark: var(--kw-dark);
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+}
