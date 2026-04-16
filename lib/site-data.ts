@@ -1,15 +1,20 @@
 export const characters = [
   "Red Monster",
-  "Hello Kitty",
+  "White Kitty",
   "Beagle with Black Spots",
   "Cop Canine",
-  "Firefighter Canine",
   "Airplane Pilot Canine",
-  "Electric Yellow Moon",
+  "German Shepherd Cop Dog",
+  "Dalmatian Firefighter Dog",
+  "Orange Cockapoo Airplane Dog",
   "Unicorn",
   "Blue Spotted Canine",
+  "Blue Heeler Dog",
+  "Red Heeler Dog",
   "Boy Mouse",
   "Girl Mouse",
+  "Pink Girl Mouse",
+  "Red Girl Mouse",
   "Cute Cuddly Bear",
   "Yellow Shark",
   "Poppy from Trolls",
@@ -23,11 +28,10 @@ export const characters = [
   "Blue Monster",
   "Curly Haired Latina",
   "Easter Bunny",
+  "Santa",
 ] as const;
 
-export const orderCharacters = characters.filter(
-  (character) => character !== "Easter Bunny",
-);
+export const orderCharacters = characters;
 
 export const packages = [
   {

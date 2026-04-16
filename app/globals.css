@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --kw-red: #e63030;
-  --kw-orange: #f07820;
-  --kw-yellow: #f5c800;
-  --kw-green: #3ab54a;
-  --kw-blue: #2e7dd6;
-  --kw-purple: #8b3fa8;
+  --kw-red: #f28b82;
+  --kw-orange: #f9b784;
+  --kw-yellow: #fde293;
+  --kw-green: #81c784;
+  --kw-blue: #7eb8f7;
+  --kw-purple: #c3a0d8;
   --kw-cream: #fffdf8;
   --kw-dark: #1a1a1a;
   --kw-section-steps: #f0f8ff;

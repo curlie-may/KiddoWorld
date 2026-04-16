@@ -51,6 +51,9 @@ export default function CharactersPage() {
               {character === "Easter Bunny" && (
                 <p className="mt-1 text-sm text-kw-dark/55">Contact for pricing</p>
               )}
+              {character === "Santa" && (
+                <p className="mt-1 text-sm text-kw-dark/55">Rentals only</p>
+              )}
             </article>
           ))}
         </div>

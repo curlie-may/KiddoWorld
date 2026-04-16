@@ -12,19 +12,19 @@
 
 ## Brand Colors
 ```
---kw-red:    #e63030   (primary CTA, labels, accents)
---kw-orange: #f07820   (accent)
---kw-yellow: #f5c800   (step numbers, stars, badges)
---kw-green:  #3ab54a   (accent, reviews section)
---kw-blue:   #2e7dd6   (featured card, accent)
---kw-purple: #8b3fa8   (accent)
+--kw-red:    #f28b82   (primary CTA, labels, accents — pastel red)
+--kw-orange: #f9b784   (accent — pastel orange)
+--kw-yellow: #fde293   (step numbers, stars, badges — pastel yellow)
+--kw-green:  #81c784   (accent, reviews section — pastel green)
+--kw-blue:   #7eb8f7   (featured card, accent — pastel blue)
+--kw-purple: #c3a0d8   (accent — pastel purple)
 --kw-cream:  #fffdf8   (page background)
 --kw-dark:   #1a1a1a   (body text, footer)
 ```
 
 ---
 
-## Sitemap — 6 Pages
+## Sitemap — 9 Pages
 
 | Page | URL |
 |---|---|
@@ -32,10 +32,13 @@
 | About | /about |
 | Characters | /characters |
 | Packages | /packages |
-| Order Form | /order |
+| Pricing | /pricing |
+| Order Form — Character Party | /order |
+| Order Form — Costume Rental | /order-rental |
+| Order Form — Corporate Events | /order-corporate |
 | Contact | /contact |
 
-Nav links: **Characters · Packages · About Us · Order Form · Contact**
+Nav links: **Characters · Packages · Pricing · About Us · Order Form · Contact**
 Nav CTA button (red): **Book a Party** → links to /order
 
 ---
@@ -52,11 +55,7 @@ Nav CTA button (red): **Book a Party** → links to /order
   - H1 (Roboto 900, 52px): "Make Their Birthday **Magical**" — "Magical" in red
   - Subtext (Roboto 300): "Professional costumed character parties with music, games, dancing, and party favors — creating memories that last a lifetime."
   - Two buttons: "Book Your Party" (red, filled) and "View Characters" (outline)
-- Right side: 2×2 grid of colored category cards with labels
-  - Red card: "Princess Party"
-  - Blue card: "Superhero Party"
-  - Green card: "Music & Dance"
-  - Purple card: "Cartoon Favorites"
+- Right side: Auto-playing slideshow/carousel of party photos (use placeholder colored boxes for now, swap in real Cloudinary photos later). Slideshow should auto-advance every 3-4 seconds with a smooth fade or slide transition. No visible prev/next arrows needed — keep it clean.
 - Background: cream (#fffdf8)
 
 **Section 2 — How It Works**
@@ -120,31 +119,36 @@ Nav CTA button (red): **Book a Party** → links to /order
   - Special case: Easter Bunny card shows "Contact for pricing" in muted text below the character name
 - CTA at bottom: "Don't see your character? Contact us." → /contact
 
-**Character List (24 characters — all placeholder images for now):**
+**Character List (29 characters — all placeholder images for now):**
 1. Red Monster
-2. Hello Kitty
+2. White Kitty *(formerly Hello Kitty)*
 3. Beagle with Black Spots
 4. Cop Canine
-5. Firefighter Canine
-6. Airplane Pilot Canine
-7. Electric Yellow Moon
+5. German Shepherd Cop Dog
+6. Dalmatian Firefighter Dog
+7. Orange Cockapoo Airplane Dog
 8. Unicorn
 9. Blue Spotted Canine
-10. Boy Mouse
-11. Girl Mouse
-12. Cute Cuddly Bear
-13. Yellow Shark
-14. Poppy from Trolls
-15. Blue Hedgehog
-16. Toy Astronaut
-17. Toy Cowboy
-18. Pink Pig
-19. Melon Baby
-20. Red Italian Brother
-21. Green Italian Brother
-22. Blue Monster
-23. Curly Haired Latina
-24. Easter Bunny *(show "Contact for pricing" in muted text below name on character card)*
+10. Blue Heeler Dog
+11. Red Heeler Dog
+12. Boy Mouse
+13. Girl Mouse
+14. Pink Girl Mouse
+15. Red Girl Mouse
+16. Cute Cuddly Bear
+17. Yellow Shark
+18. Poppy from Trolls
+19. Blue Hedgehog
+20. Toy Astronaut
+21. Toy Cowboy
+22. Pink Pig
+23. Melon Baby
+24. Red Italian Brother
+25. Green Italian Brother
+26. Blue Monster
+27. Curly Haired Latina
+28. Easter Bunny *(show "Contact for pricing" in muted text below name on character card)*
+29. Santa *(show "Rentals only" in muted text below name on character card)*
 
 ---
 
@@ -156,23 +160,34 @@ Three package detail sections, each with image + text side by side (alternating 
 - Image: placeholder box (Cloudinary image to be added)
 - H2: "Character-Themed Party"
 - Description: "Let Kiddo World provide the character fun and games for your party! Your character arrives in full costume with a custom soundtrack, party games, dancing, and party favors for up to 30 kids."
-- Button: "Book This Package" → /order
+- Video embed placeholder: add a labeled placeholder box below the description that says "Video goes here" — will be replaced with a real embed URL later
+- Buttons: "See Pricing" → /pricing and "Book This Package" → /order
 
 **Package 2 — Costume Rental**
 - Image: placeholder box (Cloudinary image to be added)
 - H2: "Costume Rental"
 - Description: "Want to host your own themed party? Choose from our library of 20+ professional character costumes. Perfect for parents who want to be the star of the show!"
-- Button: "Get a Quote" → /order
+- Buttons: "See Pricing" → /pricing and "Get a Quote" → /order-rental
 
 **Package 3 — Corporate Events**
 - Image: placeholder box (Cloudinary image to be added)
 - H2: "Corporate Events"
 - Description: "Add fun to your company event, school carnival, or community gathering with a professional costumed character. We entertain the kids — and the adults!"
-- Button: "Get a Quote" → /order
+- Buttons: "See Pricing" → /pricing and "Get a Quote" → /order-corporate
 
 ---
 
-### 5. Order Form (`/order`)
+### 5. Pricing (`/pricing`)
+
+- Section label: "PRICING"
+- H1: "Simple, transparent pricing"
+- Subtext: owner to provide — use placeholder text for now: "Pricing details coming soon. Contact us for a custom quote."
+- Pricing content: placeholder for now — owner will provide full pricing details
+- CTA at bottom: "Book a Party" button → /order
+
+---
+
+### 6. Order Form — Character Party (`/order`)
 
 - H1: "Order Form for Character Party"
 - Form fields (via Formspree), in this logical flow order:
@@ -183,8 +198,8 @@ Three package detail sections, each with image + text side by side (alternating 
   - Email Address (text field, required)
 
   **Your Party**
-  - Character (dropdown — full list of 23 characters, required)
-  - Duration (dropdown: choose party length, required)
+  - Character(s) (multi-select dropdown with tags — full list of 29 characters, required. User can select multiple characters.)
+  - Duration (dropdown: 1 hour / 90 minutes / 2 hours / 3 hours, required)
   - Event Date (date picker, required)
   - Party Start Time (text field, required)
   - Number of Children (number field, required)
@@ -208,7 +223,31 @@ Three package detail sections, each with image + text side by side (alternating 
 
 ---
 
-### 6. Contact (`/contact`)
+### 7. Order Form — Costume Rental (`/order-rental`)
+
+- H1: "Order Form for Costume Rental"
+- Placeholder: use the same form fields as /order for now
+- Character(s) field: multi-select dropdown with tags — full list of 29 characters
+- Submit button (red): "Send"
+- Same confirmation message as /order
+- Form submits to: info@kiddoworld.com via Formspree
+- Note: form fields will be customized in a future update
+
+---
+
+### 8. Order Form — Corporate Events (`/order-corporate`)
+
+- H1: "Order Form for Corporate Events"
+- Placeholder: use the same form fields as /order for now
+- Character(s) field: multi-select dropdown with tags — full list of 29 characters
+- Submit button (red): "Send"
+- Same confirmation message as /order
+- Form submits to: info@kiddoworld.com via Formspree
+- Note: form fields will be customized in a future update
+
+---
+
+### 9. Contact (`/contact`)
 
 - H1: "Get in Touch"
 - Left side — contact info:
@@ -226,8 +265,8 @@ Three package detail sections, each with image + text side by side (alternating 
 ### Footer (all pages)
 - Rainbow "Kiddo World" logo text (matching logo colors: K=red, i=orange, d=yellow, d=green, o=blue, W=purple, o=red, r=orange, l=yellow, d=green)
 - Tagline: "SF Bay Area's favorite party characters"
-- Nav links: Characters · Packages · About · Order Form · Contact
-- Social icons: Yelp, Instagram
+- Nav links: Characters · Packages · Pricing · About · Order Form · Contact
+- Social icons: Yelp (link: https://www.yelp.com/biz/kiddo-world-san-jose), Instagram (@kidd0w0rld), Google Reviews (placeholder URL for now)
 - Copyright: "© 2026 Kiddo World · San Jose, CA · (669) 444-0941"
 
 ---
@@ -237,6 +276,7 @@ Three package detail sections, each with image + text side by side (alternating 
 - All images served via Cloudinary — use `next/image` with Cloudinary loader. All images are placeholders for now — colored boxes with character initials until real photos are uploaded to Cloudinary.
 - Formspree handles both the Order Form and Contact form — no backend needed
 - Mobile-first responsive: nav collapses to hamburger on mobile
-- The Order Form character dropdown must include all 23 characters from the character list above
+- The Order Form character dropdown must include all 29 characters from the character list above. Easter Bunny and Santa should be included in the dropdown.
 - The Order Form fields are grouped into 4 sections: About You, Your Party, Event Location, Anything Else — render each group with a small section label above it
+- The Pricing page content is a placeholder — owner will provide real pricing details later
 - The mockup prototype built in Claude.ai is the visual reference for design decisions

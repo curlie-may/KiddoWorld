@@ -46,7 +46,7 @@ export default function ContactPage() {
             <p>
               <span className="font-bold text-kw-dark">Yelp:</span>{" "}
               <a
-                href="https://www.yelp.com"
+                href="https://www.yelp.com/biz/kiddo-world-san-jose"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-kw-red hover:underline"

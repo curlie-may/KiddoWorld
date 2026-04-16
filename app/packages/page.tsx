@@ -32,12 +32,48 @@ export default function PackagesPage() {
                 <p className="mt-4 text-base leading-8 text-kw-dark/80 md:text-lg">
                   {pkg.description}
                 </p>
-                <Link
-                  href="/order"
-                  className="mt-8 inline-flex rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
-                >
-                  {pkg.buttonLabel}
-                </Link>
+                {pkg.name === "Character-Themed Party" && (
+                  <div className="mt-6">
+                    <PlaceholderBox
+                      label="Video goes here"
+                      className="min-h-[200px] bg-kw-dark/5"
+                      initials="▶"
+                    />
+                  </div>
+                )}
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  {pkg.name === "Character-Themed Party" && (
+                    <Link
+                      href="/pricing"
+                      className="inline-flex items-center justify-center rounded-full border-2 border-kw-red px-7 py-3 text-base font-bold text-kw-red transition hover:bg-kw-red/5"
+                    >
+                      See Pricing
+                    </Link>
+                  )}
+                  {pkg.name === "Character-Themed Party" ? (
+                    <Link
+                      href="/order"
+                      className="inline-flex items-center justify-center rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
+                    >
+                      Book This Package
+                    </Link>
+                  ) : pkg.name === "Costume Rental" ? (
+                    <Link
+                      href="/order-rental"
+                      className="inline-flex items-center justify-center rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
+                    >
+                      Get a Quote
+                    </Link>
+                  ) : (
+                    <Link
+                      href="/order-corporate"
+                      className="inline-flex items-center justify-center rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
+                    >
+                      Get a Quote
+                    </Link>
+                  )}
+                </div>
               </div>
             </article>
           ))}
