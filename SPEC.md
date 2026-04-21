@@ -147,8 +147,9 @@ Nav CTA button (red): **Book a Party** → links to /order
 25. Green Italian Brother
 26. Blue Monster
 27. Curly Haired Latina
-28. Easter Bunny *(show "Contact for pricing" in muted text below name on character card)*
-29. Santa *(show "Rentals only" in muted text below name on character card)*
+28. Cat Boy
+29. Easter Bunny *(show "Contact for pricing" in muted text below name on character card)*
+30. Santa *(show "Rentals only" in muted text below name on character card)*
 
 ---
 

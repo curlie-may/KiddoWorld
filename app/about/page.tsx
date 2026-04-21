@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PlaceholderBox } from "@/components/ui/PlaceholderBox";
+import { AboutRoxyImage } from "@/components/about/AboutRoxyImage";
 
 export default function AboutPage() {
   return (
@@ -13,19 +13,19 @@ export default function AboutPage() {
             Meet Roxy
           </h1>
           <blockquote className="mt-6 rounded-3xl bg-white p-6 text-base leading-8 text-kw-dark/85 shadow-sm md:p-8 md:text-lg">
-            &ldquo;Hey there, I&apos;m Roxy, the mastermind behind Kiddo World, your
-            go-to for epic kids&apos; parties. Picture this: two decades ago, my
-            family and I landed in the USA, unknowingly setting the stage for a
-            wild ride. Back in the day, my Dad, on the hunt for extra cash,
-            stumbled upon a Craigslist gig that sparked my joy-filled journey
-            into kids&apos; parties. Fast forward 20 years, and we&apos;re still cruising
-            the Bay Area, delivering smiles to kiddos. In 2018, I took the helm
-            of Kiddo World after spending 18 years rocking stages for others.
-            Little did I know, what started as a side hustle would become my
-            full-time gig. Now with over 20 character costumes, Kiddo World
-            isn&apos;t just a business — it&apos;s my dream come true. Ready to sprinkle
-            some magic at your event? We are here to make that magic come
-            alive!&rdquo;
+           <div className="space-y-4"> 
+            <p>Hey there, I&apos;m Roxy, the face behind Kiddo World your
+            go-to for unforgettable kids&apos; parties. About 23 years ago, my family and I moved to the U.S. not knowing it 
+            would lead us here. Back then, my dad picked up a Craigslist gig to earn some extra money, and that&apos;s where my love 
+            for kids&apos; entertainment first began.</p>
+            <p>Fast forward over two decades, and we&apos;re still bringing smiles to kids all over the Bay Area. In 2018, after 
+            18 years of performing and working events for others, I took over Kiddo World.  What started as a side hustle quickly 
+            grew into my full-time passion.</p>  <p>Alongside Kiddo World, I&apos;m also a dedicated office manager at a tech company in the Bay Area, 
+            where I plan corporate events and help create thoughtful, engaging workplace environments.  That experience has shaped how I approach
+            every detail and how I design experiences that people genuinely enjoy&mdash;whether it&apos;s in a fast-paced tech office or at a child&apos;s
+            celebration.</p> <p>Today, with 30 character costumes, Kiddo World is more than just a business, it&apos;s truly a dream come true.  Ready to add 
+            a little magic to your next event? We&apos;re here to make it happen. </p>
+           </div>
           </blockquote>
           <Link
             href="/order"
@@ -35,11 +35,7 @@ export default function AboutPage() {
           </Link>
         </div>
 
-        <PlaceholderBox
-          label="Roxy Photo Placeholder"
-          initials="R"
-          className="min-h-[420px] bg-kw-blue/10"
-        />
+        <AboutRoxyImage />
       </div>
     </section>
   );

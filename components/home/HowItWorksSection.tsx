@@ -1,29 +1,29 @@
-import { CalendarDays, Camera, Music, Smile } from "lucide-react";
+import { CalendarDays, Drama, Music, PartyPopper, Smile, Star } from "lucide-react";
 
 const steps = [
   {
     num: "01",
-    icon: Smile,
-    title: "Pick Your Character",
-    body: "Choose from 20+ beloved characters your child will love.",
+    icon: Star,
+    title: "Pick Your Package",
+    body: "Choose a Character-Themed Party, Costume Rental, or Corporate Event — we have options for every occasion.",
   },
   {
     num: "02",
-    icon: CalendarDays,
-    title: "Book Online",
-    body: "Select your date, duration, and number of characters in minutes.",
+    icon: Drama,
+    title: "Choose your characters",
+    body: "Choose from 20+ beloved characters your child will love.",
   },
   {
     num: "03",
-    icon: Music,
-    title: "Party Time!",
-    body: "Your character arrives with a custom soundtrack, games, and favors for all kids.",
+    icon: CalendarDays,
+    title: "Book Online",
+    body: "Select your date, duration, and number of characters.",
   },
   {
     num: "04",
-    icon: Camera,
-    title: "Photo Memories",
-    body: "We end every show with a group Happy Birthday song and photo time.",
+    icon: PartyPopper,
+    title: "Party Time!", 
+    body: "Your character arrives and the fun begins!",
   },
 ] as const;
 
@@ -31,15 +31,14 @@ export function HowItWorksSection() {
   return (
     <section className="bg-[var(--kw-section-steps)] px-4 py-14 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-kw-red md:text-sm">
+        <p className="text-center text-lg font-bold uppercase tracking-[0.2em] text-kw-red md:base">
           HOW IT WORKS
         </p>
-        <h2 className="mt-3 text-center text-3xl font-black tracking-tight text-kw-dark md:text-4xl">
+        <h2 className="mt-3 text-center text-2xl font-black tracking-tight text-kw-dark md:text-3xl">
           A complete party in 4 easy steps
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-base font-light text-kw-dark/85 md:text-lg">
-          From booking to birthday cake, we handle the entertainment so you can
-          enjoy every moment.
+          We handle the entertainment so you can enjoy every moment.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

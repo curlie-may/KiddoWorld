@@ -48,7 +48,7 @@ export default function PackagesPage() {
                       href="/pricing"
                       className="inline-flex items-center justify-center rounded-full border-2 border-kw-red px-7 py-3 text-base font-bold text-kw-red transition hover:bg-kw-red/5"
                     >
-                      See Pricing
+                      Learn More
                     </Link>
                   )}
                   {pkg.name === "Character-Themed Party" ? (

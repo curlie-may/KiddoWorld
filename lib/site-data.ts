@@ -27,6 +27,7 @@ export const characters = [
   "Green Italian Brother",
   "Blue Monster",
   "Curly Haired Latina",
+  "Cat Boy",
   "Easter Bunny",
   "Santa",
 ] as const;

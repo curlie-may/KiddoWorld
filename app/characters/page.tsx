@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { CharacterCardMedia } from "@/components/characters/CharacterCardMedia";
+import { characterNameToCloudinarySrc } from "@/lib/character-cloudinary";
 import { characters } from "@/lib/site-data";
 
 const cardColors = [
@@ -40,13 +42,12 @@ export default function CharactersPage() {
               key={character}
               className="rounded-3xl border border-kw-dark/10 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:scale-[1.01]"
             >
-              <div
-                className={`flex aspect-square items-center justify-center rounded-2xl ${cardColors[index % cardColors.length]}`}
-              >
-                <span className="text-5xl font-black tracking-tight text-kw-dark/60">
-                  {getInitials(character)}
-                </span>
-              </div>
+              <CharacterCardMedia
+                character={character}
+                initials={getInitials(character)}
+                cardColorClass={cardColors[index % cardColors.length]}
+                cloudinarySrc={characterNameToCloudinarySrc(character)}
+              />
               <h2 className="mt-4 text-lg font-bold text-kw-dark">{character}</h2>
               {character === "Easter Bunny" && (
                 <p className="mt-1 text-sm text-kw-dark/55">Contact for pricing</p>

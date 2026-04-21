@@ -23,13 +23,15 @@ export function PackagesPreviewSection() {
   return (
     <section className="bg-white px-4 py-14 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-kw-red md:text-sm">
+        <p className="text-center text-lg font-bold uppercase tracking-[0.2em] text-kw-red md:base">
           PACKAGES
         </p>
-        <h2 className="mt-3 text-center text-3xl font-black tracking-tight text-kw-dark md:text-4xl">
+        <h2 className="mt-3 text-center text-2xl font-black tracking-tight text-kw-dark md:text-3xl">
           Everything you need for an unforgettable party
         </h2>
-
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base font-light text-kw-dark/85 md:text-lg">
+          Get started by choosing from one of the packages below. 
+        </p>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {cards.map(({ icon: Icon, title, body }) => (
             <Link
