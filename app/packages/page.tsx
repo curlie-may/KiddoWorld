@@ -56,18 +56,18 @@ export default function PackagesPage() {
                       href="/order"
                       className="inline-flex items-center justify-center rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
                     >
-                      Book This Package
+                      Book a Party
                     </Link>
                   ) : pkg.name === "Costume Rental" ? (
                     <Link
-                      href="/order-rental"
+                      href="/contact"
                       className="inline-flex items-center justify-center rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
                     >
                       Get a Quote
                     </Link>
                   ) : (
                     <Link
-                      href="/order-corporate"
+                      href="/contact"
                       className="inline-flex items-center justify-center rounded-full bg-kw-red px-7 py-3 text-base font-bold text-white transition hover:bg-kw-red/90"
                     >
                       Get a Quote
