@@ -1,5 +1,6 @@
 export const characters = [
   "Red Monster",
+  "Blue Monster",
   "White Kitty",
   "Beagle with Black Spots",
   "Cop Canine",
@@ -25,7 +26,6 @@ export const characters = [
   "Melon Baby",
   "Red Italian Brother",
   "Green Italian Brother",
-  "Blue Monster",
   "Curly Haired Latina",
   "Cat Boy",
   "Easter Bunny",

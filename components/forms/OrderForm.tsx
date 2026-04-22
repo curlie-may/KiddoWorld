@@ -95,10 +95,11 @@ export function OrderForm({ formIdEnvVar }: OrderFormProps) {
               <option value="" disabled>
                 Choose party length
               </option>
-              <option>1 hour</option>
-              <option>90 minutes</option>
-              <option>2 hours</option>
-              <option>3 hours</option>
+              <option>1 Hour</option>
+              <option>1½ Hours</option>
+              <option>2 Hours</option>
+              <option>2½ Hours</option>
+              <option>3 Hours</option>
             </SelectInput>
           </div>
 
