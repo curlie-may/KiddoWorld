@@ -8,7 +8,7 @@ export function AboutRoxyImage() {
     <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-3xl bg-kw-blue/10">
       <Image
         loader={cloudinaryLoader}
-        src="about-roxy.jpg"
+        src="roxy-photo.jpg"
         alt="Roxy, founder of Kiddo World"
         fill
         className="object-cover object-center"
