@@ -40,7 +40,7 @@ export function CharacterCardMedia({
         src={cloudinarySrc}
         alt={`${character} character`}
         fill
-        className="object-cover"
+        className="object-contain object-center"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         crossOrigin="anonymous"
         onError={() => setUsePlaceholder(true)}
