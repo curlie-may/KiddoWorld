@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { KiddoWorldLogo } from "@/components/layout/KiddoWorldLogo";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/characters", label: "Characters" },
-  { href: "/packages", label: "Packages" },
+  { href: "/the-experience", label: "The Experience" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -19,12 +20,10 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <Link
           href="/"
-          className="text-lg font-black tracking-tight text-kw-dark md:text-xl"
+          className="inline-flex shrink-0 items-center"
           onClick={() => setOpen(false)}
         >
-          <span className="bg-gradient-to-r from-kw-red via-kw-orange via-kw-yellow via-kw-green via-kw-blue to-kw-purple bg-clip-text text-transparent">
-            Kiddo World
-          </span>
+          <KiddoWorldLogo variant="header" />
         </Link>
 
         <nav

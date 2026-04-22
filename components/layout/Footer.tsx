@@ -1,44 +1,20 @@
 import Link from "next/link";
+import { KiddoWorldLogo } from "@/components/layout/KiddoWorldLogo";
 
 const footerLinks = [
   { href: "/", label: "Home" },
   { href: "/characters", label: "Characters" },
-  { href: "/packages", label: "Packages" },
+  { href: "/the-experience", label: "The Experience" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
-
-function RainbowWord({ text }: { text: string }) {
-  const colors = [
-    "text-kw-red",
-    "text-kw-orange",
-    "text-kw-yellow",
-    "text-kw-green",
-    "text-kw-blue",
-    "text-kw-purple",
-  ];
-  return (
-    <span className="inline-flex flex-wrap justify-center gap-0.5 font-black tracking-tight">
-      {text.split("").map((char, i) => (
-        <span
-          key={`${char}-${i}`}
-          className={char === " " ? "w-2" : colors[i % colors.length]}
-        >
-          {char === " " ? "\u00a0" : char}
-        </span>
-      ))}
-    </span>
-  );
-}
 
 export function Footer() {
   return (
     <footer className="border-t border-kw-dark/10 bg-kw-dark text-white">
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
         <div className="text-center">
-          <p className="text-3xl md:text-4xl">
-            <RainbowWord text="Kiddo World" />
-          </p>
+          <KiddoWorldLogo variant="footer" />
           <p className="mt-3 text-sm font-light text-white/80">
             SF Bay Area&apos;s favorite party characters
           </p>
