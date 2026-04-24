@@ -25,12 +25,14 @@ function TextArea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
 export default function ContactPage() {
   return (
     <section className="bg-kw-cream px-4 py-14 md:px-6 md:py-20">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-4xl font-black tracking-tight text-kw-dark md:text-5xl">
+          Get in Touch
+        </h1>
+        <p className="mt-2 text-base italic text-kw-dark md:text-lg">Se habla español</p>
+        <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-          <h1 className="text-4xl font-black tracking-tight text-kw-dark md:text-5xl">
-            Get in Touch
-          </h1>
-          <div className="mt-8 space-y-4 text-base text-kw-dark/80">
+          <div className="space-y-4 text-base text-kw-dark/80">
             <p>
               <span className="font-bold text-kw-dark">Email:</span>{" "}
               <a href="mailto:info@kiddoworld.com" className="text-kw-red hover:underline">
@@ -107,6 +109,7 @@ export default function ContactPage() {
             Send Message
           </button>
         </form>
+        </div>
       </div>
     </section>
   );

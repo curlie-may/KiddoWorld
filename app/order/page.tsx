@@ -7,6 +7,9 @@ export default function OrderPage() {
         <h1 className="text-4xl font-black tracking-tight text-kw-dark md:text-5xl">
           Book a Character Party
         </h1>
+        <p className="mt-2 text-base italic text-kw-dark md:text-lg">
+          Se habla español
+        </p>
         <OrderForm formIdEnvVar="NEXT_PUBLIC_FORMSPREE_ORDER_ID" />
       </div>
     </section>

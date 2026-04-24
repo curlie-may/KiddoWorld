@@ -7,7 +7,7 @@ const steps = [
   {
     num: "02",
     title: "Book Online",
-    body: "Select your date, duration, and number of characters in minutes.",
+    body: "Select your date, party duration, and venue details.",
   },
   {
     num: "03",

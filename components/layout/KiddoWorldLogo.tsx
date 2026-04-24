@@ -10,13 +10,13 @@ type KiddoWorldLogoProps = {
 export function KiddoWorldLogo({ variant }: KiddoWorldLogoProps) {
   const className =
     variant === "header"
-      ? "h-8 w-auto max-h-9 md:h-9"
+      ? "h-10 w-auto max-h-11 md:h-11"
       : "mx-auto h-12 w-auto md:h-14";
 
   return (
     <Image
       loader={cloudinaryLoader}
-      src="kiddo-world-logo.jpg"
+      src="kiddo-world-logo-skyblue.jpg"
       alt="Kiddo World"
       width={220}
       height={48}

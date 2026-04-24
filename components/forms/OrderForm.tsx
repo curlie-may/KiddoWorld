@@ -1,6 +1,7 @@
 import { getFormspreeAction } from "@/lib/formspree";
 import { orderCharacters } from "@/lib/site-data";
 import { CharacterMultiSelect } from "@/components/forms/CharacterMultiSelect";
+import { EventVenueField } from "@/components/forms/EventVenueField";
 
 type OrderFormProps = {
   formIdEnvVar:
@@ -121,10 +122,7 @@ export function OrderForm({ formIdEnvVar }: OrderFormProps) {
       <section>
         <SectionLabel>Event Location</SectionLabel>
         <div className="grid gap-5 md:grid-cols-2">
-          <div>
-            <FieldLabel>Event Venue — home, park, restaurant, school, other</FieldLabel>
-            <TextInput name="eventVenue" />
-          </div>
+          <EventVenueField />
           <div>
             <FieldLabel>Name of Event Venue — e.g. name of restaurant, park</FieldLabel>
             <TextInput name="venueName" />
