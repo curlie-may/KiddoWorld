@@ -4,13 +4,14 @@ const ORIGIN = "586 Stockton Ave, San Jose, CA 95126";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const address = searchParams.get("address")?.trim() ?? "";
+  const streetAddress = searchParams.get("streetAddress")?.trim() ?? "";
+  const city = searchParams.get("city")?.trim() ?? "";
   const zipCode = searchParams.get("zipCode")?.trim() ?? "";
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!address || !zipCode) {
+  if (!streetAddress || !city || !zipCode) {
     return NextResponse.json(
-      { error: "Missing address or zip code." },
+      { error: "Missing address, city, or zip code." },
       { status: 400 },
     );
   }
@@ -22,7 +23,7 @@ export async function GET(request: Request) {
     );
   }
 
-  const destination = `${address}, ${zipCode}`;
+  const destination = `${streetAddress}, ${city}, ${zipCode}`;
   const matrixUrl = new URL(
     "https://maps.googleapis.com/maps/api/distancematrix/json",
   );
