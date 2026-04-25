@@ -1,16 +1,9 @@
 import Link from "next/link";
 import { ExperienceImage } from "./ExperienceImage";
+import { partyPricing } from "@/lib/site-data";
 
-const pricingRows = [
-  { duration: "1 Hour", one: "$215", two: "$335", three: "$480" },
-  { duration: "1½ Hours", one: "$265", two: "$435", three: "$550" },
-  { duration: "2 Hours", one: "$335", two: "$510", three: "contact" },
-  { duration: "2½ Hours", one: "$405", two: "$600", three: "contact" },
-  { duration: "3 Hours", one: "$475", two: "$880", three: "contact" },
-] as const;
-
-function PriceCell({ value }: { value: string }) {
-  if (value === "contact") {
+function PriceCell({ value }: { value: number | null }) {
+  if (value === null) {
     return (
       <Link
         href="/contact"
@@ -20,7 +13,7 @@ function PriceCell({ value }: { value: string }) {
       </Link>
     );
   }
-  return <span className="text-kw-dark">{value}</span>;
+  return <span className="text-kw-dark">${value}</span>;
 }
 
 export default function TheExperiencePage() {
@@ -44,28 +37,36 @@ export default function TheExperiencePage() {
         <h2 className="mt-12 text-2xl font-black tracking-tight text-kw-dark md:text-3xl">
           What to Expect
         </h2>
-        <div className="mt-4 space-y-4 text-base font-light leading-relaxed text-kw-dark/90 md:text-lg">
+        <div className="mt-4 space-y-5 text-base font-light leading-relaxed text-kw-dark/90 md:text-lg">
           <p>
             Our costumed character parties bring an interactive music, games
             &amp; dance experience designed to make your child&apos;s birthday
-            truly unforgettable. Perfect for kids of all ages, the show is
-            tailored to a younger audience&apos;s attention span and filled with
-            familiar music, engaging games, and nonstop fun.
+            truly unforgettable. Perfect for kids of all ages &mdash; whether they
+            prefer to sit and watch or jump right in and play.
           </p>
+          <div>
+            <p className="mb-2 font-bold text-kw-dark/90">What&apos;s included:</p>
+            <ul className="ml-1 list-outside list-disc space-y-1.5 pl-5">
+              <li>Portable audio system with high-energy party soundtrack</li>
+              <li>Pre-recorded instructions that guide kids through activities</li>
+              <li>Party games and party favors for all kids</li>
+            </ul>
+          </div>
+          <div>
+            <p className="mb-2 font-bold text-kw-dark/90">Activities kids love:</p>
+            <ul className="ml-1 list-outside list-disc space-y-1.5 pl-5">
+              <li>March, Limbo, Hokey Pokey</li>
+              <li>Tunnel games, pass the bean bag</li>
+              <li>Basketball toss, sticky-ball dart board</li>
+              <li>Parachute play</li>
+              <li>
+                &ldquo;If You&rsquo;re Happy and You Know It&rdquo; and more
+              </li>
+            </ul>
+          </div>
           <p>
-            Whether kids prefer to sit and watch or jump right in and play, the
-            experience is designed for everyone to enjoy. Our characters arrive
-            with a complete party package, including a portable audio system
-            with a high-energy party soundtrack, pre-recorded instructions that
-            guide the kids through activities, and plenty of music, games, and
-            party favors.
-          </p>
-          <p>
-            Children will enjoy classic favorites like the march, limbo, &ldquo;If
-            You&apos;re Happy and You Know It,&rdquo; Hokey Pokey, tunnel games,
-            pass the bean bag, basketball toss, sticky-ball dart board, and
-            parachute play. Every moment is interactive, energetic, and designed
-            to keep the party moving and fun from start to finish.
+            Every moment is interactive, energetic, and designed to keep the
+            party moving and fun from start to finish.
           </p>
         </div>
 
@@ -102,33 +103,28 @@ export default function TheExperiencePage() {
               </tr>
             </thead>
             <tbody>
-              {pricingRows.map((row, i) => (
+              {Object.entries(partyPricing).map(([duration, prices], i) => (
                 <tr
-                  key={row.duration}
+                  key={duration}
                   className={i % 2 === 0 ? "bg-white" : "bg-kw-blue/5"}
                 >
                   <td className="border-b border-kw-dark/10 px-3 py-3 font-medium text-kw-dark md:px-4">
-                    {row.duration}
+                    {duration}
                   </td>
                   <td className="border-b border-kw-dark/10 px-3 py-3 text-kw-dark md:px-4">
-                    {row.one}
+                    <PriceCell value={prices[1]} />
                   </td>
                   <td className="border-b border-kw-dark/10 px-3 py-3 text-kw-dark md:px-4">
-                    {row.two}
+                    <PriceCell value={prices[2]} />
                   </td>
                   <td className="border-b border-kw-dark/10 px-3 py-3 text-kw-dark md:px-4">
-                    <PriceCell value={row.three} />
+                    <PriceCell value={prices[3]} />
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-
-        <p className="mt-4 text-sm font-light text-kw-dark/70">
-          *From our location in San Jose, travel fees are applied to parties held
-          outside a 25-mile radius.
-        </p>
 
         <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:justify-center">
           <Link

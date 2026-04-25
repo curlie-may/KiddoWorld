@@ -34,6 +34,14 @@ export const characters = [
 
 export const orderCharacters = characters;
 
+export const partyPricing = {
+  "1 Hour": { 1: 215, 2: 335, 3: 480 },
+  "1½ Hours": { 1: 265, 2: 435, 3: 550 },
+  "2 Hours": { 1: 335, 2: 510, 3: null },
+  "2½ Hours": { 1: 405, 2: 600, 3: null },
+  "3 Hours": { 1: 475, 2: 880, 3: null },
+} as const;
+
 export const packages = [
   {
     name: "Character-Themed Party",

@@ -7,6 +7,7 @@ type CharacterMultiSelectProps = {
   options: readonly string[];
   required?: boolean;
   label?: string;
+  onSelectionChange?: (selected: string[]) => void;
 };
 
 export function CharacterMultiSelect({
@@ -14,6 +15,7 @@ export function CharacterMultiSelect({
   options,
   required,
   label,
+  onSelectionChange,
 }: CharacterMultiSelectProps) {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
@@ -29,6 +31,11 @@ export function CharacterMultiSelect({
 
   const value = selected.join(", ");
   const showError = Boolean(required && touched && selected.length === 0);
+
+  function updateSelected(next: string[]) {
+    setSelected(next);
+    onSelectionChange?.(next);
+  }
 
   return (
     <div>
@@ -47,7 +54,7 @@ export function CharacterMultiSelect({
               key={item}
               type="button"
               className="inline-flex items-center gap-2 rounded-full bg-kw-yellow/50 px-3 py-1 text-sm font-bold text-kw-dark"
-              onClick={() => setSelected((prev) => prev.filter((v) => v !== item))}
+              onClick={() => updateSelected(selected.filter((v) => v !== item))}
               aria-label={`Remove ${item}`}
             >
               <span className="truncate">{item}</span>
@@ -83,7 +90,7 @@ export function CharacterMultiSelect({
                     type="button"
                     className="w-full px-4 py-3 text-left text-sm text-kw-dark hover:bg-kw-cream"
                     onClick={() => {
-                      setSelected((prev) => [...prev, option]);
+                      updateSelected([...selected, option]);
                       setQuery("");
                       setTouched(true);
                     }}
