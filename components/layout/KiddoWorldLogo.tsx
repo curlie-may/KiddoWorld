@@ -16,7 +16,7 @@ export function KiddoWorldLogo({ variant }: KiddoWorldLogoProps) {
   return (
     <Image
       loader={cloudinaryLoader}
-      src="kiddo-world-logo-skyblue.jpg"
+      src="kiddo-world-logo-shadow-crop.jpg"
       alt="Kiddo World"
       width={220}
       height={48}
