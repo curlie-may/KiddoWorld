@@ -361,6 +361,7 @@ export function OrderForm({ formIdEnvVar }: OrderFormProps) {
               name="streetAddress"
               required
               autoComplete="address-line1"
+              placeholder="Address"
               value={streetAddress}
               onChange={(e) => setStreetAddress(e.target.value)}
               className="w-full rounded-2xl border border-kw-dark/15 bg-white px-4 py-3 text-sm text-kw-dark outline-none transition focus:border-kw-red focus:ring-2 focus:ring-kw-red/15"
@@ -468,8 +469,8 @@ export function OrderForm({ formIdEnvVar }: OrderFormProps) {
         >
           Send
         </button>
-        <blockquote className="mt-6 whitespace-pre-line text-sm leading-7 text-kw-dark/75 md:text-base">
-          &ldquo;{confirmationMessage}&rdquo;
+        <blockquote className="mt-6 whitespace-pre-line text-base leading-7 text-kw-dark">
+          {confirmationMessage}
         </blockquote>
       </div>
     </form>
