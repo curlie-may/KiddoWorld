@@ -35,11 +35,11 @@ export const characters = [
 export const orderCharacters = characters;
 
 export const partyPricing = {
-  "1 Hour": { 1: 215, 2: 335, 3: 480 },
-  "1½ Hours": { 1: 265, 2: 435, 3: 550 },
-  "2 Hours": { 1: 335, 2: 510, 3: null },
-  "2½ Hours": { 1: 405, 2: 600, 3: null },
-  "3 Hours": { 1: 475, 2: 880, 3: null },
+  "1 Hour": { 1: 225, 2: 350, 3: 500 },
+  "1½ Hours": { 1: 265, 2: 425, 3: 570 },
+  "2 Hours": { 1: 345, 2: 525, 3: null },
+  "2½ Hours": { 1: 425, 2: 625, 3: null },
+  "3 Hours": { 1: 505, 2: 725, 3: null },
 } as const;
 
 export const packages = [

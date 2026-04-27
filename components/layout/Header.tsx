@@ -27,7 +27,7 @@ export function Header() {
         </Link>
 
         <nav
-          className="hidden items-center gap-6 text-sm font-medium text-kw-dark md:flex"
+          className="hidden items-center gap-6 text-lg font-medium text-kw-dark md:flex"
           aria-label="Main"
         >
           {navLinks.map(({ href, label }) => (
@@ -44,7 +44,7 @@ export function Header() {
         <div className="hidden md:block">
           <Link
             href="/order"
-            className="rounded-full bg-kw-red px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-kw-red/90"
+            className="rounded-full bg-kw-red px-5 py-2.5 text-base font-bold text-white shadow-sm transition hover:bg-kw-red/90"
           >
             Book a Party
           </Link>

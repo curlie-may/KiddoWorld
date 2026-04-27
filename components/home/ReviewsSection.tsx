@@ -1,28 +1,28 @@
 const reviews = [
   {
-    initials: "JM",
-    name: "Jennifer M.",
-    city: "San Jose CA",
+    initials: "CI",
+    name: "Carmen I.",
+    city: "Sunnyvale, CA",
     quote:
-      "My son's birthday party was truly magical, thanks to Kiddo World and the incredible performance of Mickey and Minnie Mouse. The moment they arrived, the children's faces lit up with pure joy.",
+      "We had an amazing experience with Kiddo World for my daughter's 3rd birthday party! Roxana came as Bluey, and she was absolutely fantastic! Roxana's energy and ability to make every child feel included were incredible. Highly recommend for any kid's party!",
     ring: "ring-kw-green",
     bg: "bg-kw-green/15",
   },
   {
-    initials: "RL",
-    name: "Ricardo L.",
-    city: "Fremont CA",
+    initials: "AP",
+    name: "Alina P.",
+    city: "Santa Clara, CA",
     quote:
-      "My son was freaking over the moon that Chase came to his bday party (and even had birthday cake together!). He's been talking about it non stop after the party. Definitely a core memory made.",
+      "Roxy is amazing, I highly recommend her! She is punctual, friendly, flexible and very decently priced! Mickey and Minnie were not just characters; they were truly captivating performers. They engaged with the children on a personal level, making each child feel special.",
     ring: "ring-kw-blue",
     bg: "bg-kw-blue/15",
   },
   {
-    initials: "AP",
-    name: "Anita P.",
-    city: "Santa Clara CA",
+    initials: "BM",
+    name: "Bee M.",
+    city: "Newark, CA",
     quote:
-      "Wonderful experience from start to finish — the team was responsive, punctual, and the kids had an absolute blast. We will definitely book again!",
+      "Thank you Curious George (Roxy) for making my son's dream come true! Roxy arrived early to prepare, and she was the life of the party! The kids loved playing limbo, basketball, Velcro darts, parachute, tunnel, and more. My son had the absolute time of his life.",
     ring: "ring-kw-purple",
     bg: "bg-kw-purple/15",
   },
@@ -57,7 +57,7 @@ export function ReviewsSection() {
               className="flex flex-col rounded-2xl border border-kw-green/15 bg-white/90 p-6 shadow-sm"
             >
               <Stars />
-              <blockquote className="mt-4 flex-1 text-sm italic leading-relaxed text-kw-dark/90">
+              <blockquote className="mt-4 flex-1 text-base italic leading-relaxed text-kw-dark/90">
                 &ldquo;{quote}&rdquo;
               </blockquote>
               <div className="mt-6 flex items-center gap-3">

@@ -47,22 +47,6 @@ export function Footer() {
           >
             Yelp
           </a>
-          <a
-            href="https://example.com/google-reviews"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-kw-yellow hover:text-kw-yellow"
-          >
-            Google Reviews
-          </a>
-          <a
-            href="https://www.instagram.com/kidd0w0rld"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-kw-yellow hover:text-kw-yellow"
-          >
-            Instagram
-          </a>
         </div>
 
         <p className="mt-10 text-center text-xs text-white/55">
