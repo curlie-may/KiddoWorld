@@ -13,10 +13,6 @@ export default function OrderPage() {
         <p className="mt-4 text-base text-kw-dark md:text-lg">
           Complete the form below to see your estimated party cost.
         </p>
-        <p className="mt-3 text-base text-kw-dark md:text-lg">
-          Travel is free within 15 miles of our San Jose location. Beyond 15
-          miles, a $1 per mile travel fee applies.
-        </p>
         <OrderForm formIdEnvVar="NEXT_PUBLIC_FORMSPREE_ORDER_ID" />
       </div>
     </section>
