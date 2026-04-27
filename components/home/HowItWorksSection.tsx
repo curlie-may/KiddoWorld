@@ -36,7 +36,7 @@ export function HowItWorksSection() {
               key={num}
               className="rounded-2xl border border-kw-blue/10 bg-white/80 p-6 shadow-sm backdrop-blur"
             >
-              <p className="font-black leading-none text-kw-yellow text-5xl md:text-6xl">
+              <p className="font-black leading-none text-5xl md:text-6xl" style={{color: '#e6a817'}}>
                 {num}
               </p>
               <h3 className="mt-3 text-lg font-bold text-kw-dark">{title}</h3>
